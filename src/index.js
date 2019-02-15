@@ -10,11 +10,12 @@ app.set('port', process.env.PORT || 3000)
 app.use(morgan('dev'))
 
 //Routes
+app.use(require('./routes/clima.route'))
 
 //Static files
 
 
-// starting the server
+// Starting the server
 app.listen(app.get('port'), () => {
-    console.log('Server on port', app.get('port'))
+  console.log('Server on port', app.get('port'))
 })
